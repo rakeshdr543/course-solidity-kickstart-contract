@@ -10,7 +10,7 @@ contract CampaignFactory {
         campaignsList.push(newCampaign);
     }
 
-    function getCampaigns() public view returns (Campaign[] memory) {
+    function getDeployedCampaigns() public view returns (Campaign[] memory) {
         return campaignsList;
     }
 }
@@ -31,7 +31,7 @@ contract Campaign {
     uint256 public approversCount;
 
     uint256 public numRequests;
-    mapping(uint256 => Request) requests;
+    mapping(uint256 => Request) public requests;
 
     constructor(uint256 minimum, address creator) {
         manager = creator;
@@ -44,7 +44,10 @@ contract Campaign {
     }
 
     function contribute() public payable {
-        require(minimumContribution < msg.value);
+        require(
+            minimumContribution < msg.value,
+            "Needs to provide minimum contribution"
+        );
         approvers[msg.sender] = true;
         approversCount++;
     }
