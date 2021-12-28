@@ -1,3 +1,3 @@
 # course-solidity-kickstart-contract
 
-Campaign Factory smart contract is deployed to Rinkeby Testnet Network - 0x4020A6Ac2186f0273d6E84CB14e7CaEc8AB9615a
+Campaign Factory smart contract is deployed to Rinkeby Testnet Network - 0x8b0d61F502bE22122903F66FF8fa38F816a6C303
