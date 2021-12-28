@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "test": "mocha",
-    "compile": "node ethereum/compile.js",
-    "deploy": "env-cmd -f .env node ethereum/deploy.js",
+    "compile-contract": "node ethereum/compile.js",
+    "deploy-contract": "env-cmd -f .env node ethereum/deploy.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
